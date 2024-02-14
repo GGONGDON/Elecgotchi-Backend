@@ -30,7 +30,6 @@ public class User {
     /**비밀번호
      * 타입 : Varchar(255)
      */
-    @Column(length = 255)
     private String password;
 
     /**이메일
