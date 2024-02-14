@@ -1,4 +1,4 @@
-package com.elecgotchi.elecgotchibackend.domain.memo.entity;
+package com.elecgotchi.elecgotchibackend.domain.news.entity;
 
 import com.elecgotchi.elecgotchibackend.domain.device.entity.Device;
 import jakarta.persistence.*;
@@ -13,13 +13,13 @@ import java.time.LocalDateTime;
 @Getter
 @Setter(AccessLevel.PROTECTED)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Memo {
+public class News {
     /**식별자
      * 타입 : Integer
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "memo_id")
+    @Column(name = "news_id")
     private Integer id;
 
     /**기기아이디
@@ -29,15 +29,26 @@ public class Memo {
     @JoinColumn(name = "device_id")
     private Device device;
 
-    /**내용
-     * 타입 : Varchar(1000)
+    /**뉴스링크
+     * 타입 : Varchar(4096)
      */
-    @Column(length = 1000)
-    private String content;
+    @Column(length = 4096)
+    private String url;
 
-    /**등록일시
-     * 타입 : Datetime
+    /**제목
+     * 타입 : Varchar(50)
      */
-    @Column(name = "created_at")
-    private LocalDateTime createdAt;
+    @Column(length = 50)
+    private String title;
+
+    /**키워드
+     * 타입 : Varchar(50)
+     */
+    @Column(length = 50)
+    private String keyword;
+
+    /**게시일
+     * 타입 : datetime
+     */
+    private LocalDateTime dateline;
 }
