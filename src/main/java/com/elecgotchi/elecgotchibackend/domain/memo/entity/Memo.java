@@ -23,7 +23,7 @@ public class Memo {
     private Integer id;
 
     /**기기아이디
-     * 타입 : Integer
+     * 타입 : Device
      */
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "device_id")

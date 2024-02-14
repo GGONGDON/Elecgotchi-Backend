@@ -21,7 +21,7 @@ public class Device {
     private Integer id;
 
     /**사용자 아이디
-     * 타입 : Integer
+     * 타입 : User
      */
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
