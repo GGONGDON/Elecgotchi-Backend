@@ -92,7 +92,7 @@ public class Device {
      */
     private Status status;
 
-    /**등록날짜
+    /**등록일시
      * 타입 : Datetime
      */
     private LocalDateTime created_at;
