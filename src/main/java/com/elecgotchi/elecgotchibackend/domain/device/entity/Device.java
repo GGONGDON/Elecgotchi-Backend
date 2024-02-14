@@ -1,5 +1,6 @@
 package com.elecgotchi.elecgotchibackend.domain.device.entity;
 
+import com.elecgotchi.elecgotchibackend.domain.user.entity.User;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
